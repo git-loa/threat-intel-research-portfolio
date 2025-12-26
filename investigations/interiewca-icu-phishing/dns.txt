@@ -1,0 +1,62 @@
+
+; <<>> DiG 9.20.15-2-Debian <<>> A interiewca.icu
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 63201
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0005, udp: 1232
+;; QUESTION SECTION:
+;interiewca.icu.			IN	A
+
+;; ANSWER SECTION:
+interiewca.icu.		5	IN	A	15.197.162.184
+
+;; Query time: 63 msec
+;; SERVER: 192.168.197.2#53(192.168.197.2) (UDP)
+;; WHEN: Wed Dec 24 01:24:45 EST 2025
+;; MSG SIZE  rcvd: 59
+
+
+; <<>> DiG 9.20.15-2-Debian <<>> NS interiewca.icu
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 28475
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0005, udp: 1232
+;; QUESTION SECTION:
+;interiewca.icu.			IN	NS
+
+;; ANSWER SECTION:
+interiewca.icu.		5	IN	NS	launch1.spaceship.net.
+interiewca.icu.		5	IN	NS	launch2.spaceship.net.
+
+;; Query time: 47 msec
+;; SERVER: 192.168.197.2#53(192.168.197.2) (UDP)
+;; WHEN: Wed Dec 24 01:25:05 EST 2025
+;; MSG SIZE  rcvd: 100
+
+
+; <<>> DiG 9.20.15-2-Debian <<>> MX interiewca.icu
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 24830
+;; flags: qr rd ra; QUERY: 1, ANSWER: 2, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; MBZ: 0x0005, udp: 1232
+;; QUESTION SECTION:
+;interiewca.icu.			IN	MX
+
+;; ANSWER SECTION:
+interiewca.icu.		5	IN	MX	0 mx1.spacemail.com.
+interiewca.icu.		5	IN	MX	0 mx2.spacemail.com.
+
+;; Query time: 47 msec
+;; SERVER: 192.168.197.2#53(192.168.197.2) (UDP)
+;; WHEN: Wed Dec 24 01:25:20 EST 2025
+;; MSG SIZE  rcvd: 96
+
