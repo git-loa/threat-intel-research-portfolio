@@ -1,3 +1,8 @@
+Absolutely — here is your investigation **updated with a clean, professional workflow section**, placed exactly where it belongs: **right after the hypothesis and before the technical analysis**.
+
+I’ve written it in the same tone and structure as your investigation, and tailored it specifically to phishing/domain‑based cases.
+
+---
 
 # **Phishing Case Study: interiewca[.]icu — QR‑Based Job Recruitment Scam**
 
@@ -44,11 +49,42 @@ The domain is part of a phishing campaign targeting job seekers, using QR codes 
 
 ---
 
-# **4. Technical Analysis (Kali Linux)**
+# **4. Workflow for This Investigation**
+
+This workflow reflects the methodology used for **phishing and domain‑based investigations**.  
+It is specific to this case and not intended as a universal CTI workflow.
+
+```
+Suspicious Input (job message with link)
+      ↓
+Initial Triage (red flags, employer validation)
+      ↓
+WHOIS & RDAP Enumeration
+      ↓
+DNS Profiling (A, NS, MX)
+      ↓
+HTTP Header Inspection (curl)
+      ↓
+Sandboxing (URLScan.io)
+      ↓
+Reputation & Redirect Analysis (VirusTotal)
+      ↓
+Infrastructure Pivoting (final URL, hosting provider)
+      ↓
+MITRE ATT&CK Mapping
+      ↓
+Risk Assessment & Reporting
+```
+
+This sequence guided the technical analysis that follows.
 
 ---
 
-## **4.1 WHOIS Analysis**
+# **5. Technical Analysis (Kali Linux)**
+
+---
+
+## **5.1 WHOIS Analysis**
 
 Command:
 
@@ -70,7 +106,7 @@ Brand‑new, anonymous, disposable domain — classic phishing infrastructure.
 
 ---
 
-## **4.2 DNS Analysis**
+## **5.2 DNS Analysis**
 
 Commands:
 
@@ -89,7 +125,7 @@ Findings:
 
 ---
 
-## **4.3 HTTP Header Inspection (curl)**
+## **5.3 HTTP Header Inspection (curl)**
 
 Command:
 
@@ -117,7 +153,7 @@ This is a **first‑stage redirector**.
 
 ---
 
-## **4.4 URLScan.io Sandbox**
+## **5.4 URLScan.io Sandbox**
 
 URLScan revealed:
 
@@ -132,7 +168,7 @@ URLScan revealed:
 
 ---
 
-## **4.5 VirusTotal Analysis**
+## **5.5 VirusTotal Analysis**
 
 VirusTotal shows:
 
@@ -167,7 +203,7 @@ This confirms the domain is part of a **malicious redirect chain**.
 
 ---
 
-# **5. MITRE ATT&CK Mapping**
+# **6. MITRE ATT&CK Mapping**
 
 | Technique | Description |
 |----------|-------------|
@@ -179,7 +215,7 @@ This confirms the domain is part of a **malicious redirect chain**.
 
 ---
 
-# **6. Risk Assessment**
+# **7. Risk Assessment**
 
 **Impact:**  
 - Credential theft  
@@ -192,7 +228,7 @@ This confirms the domain is part of a **malicious redirect chain**.
 
 ---
 
-# **7. Conclusion**
+# **8. Conclusion**
 
 The domain `interiewca[.]icu` is confirmed malicious.  
 It is part of a QR‑based phishing campaign using:
@@ -202,11 +238,11 @@ It is part of a QR‑based phishing campaign using:
 - AWS‑hosted loader pages  
 - Fake employer pretexts  
 
-This investigation demonstrates a complete TI workflow using Kali Linux.
+This investigation demonstrates a complete phishing/domain TI workflow using Kali Linux.
 
 ---
 
-# **8. Tools Used (Kali Linux)**
+# **9. Tools Used (Kali Linux)**
 
 ### **Core Tools**
 - `whois`  
@@ -225,7 +261,7 @@ This investigation demonstrates a complete TI workflow using Kali Linux.
 
 ---
 
-# **9. Evidence Files in This Folder**
+# **10. Evidence Files in This Folder**
 
 - `whois.txt` — Raw WHOIS output  
 - `dns.txt` — Raw DNS records  
@@ -233,3 +269,13 @@ This investigation demonstrates a complete TI workflow using Kali Linux.
 - `vt.txt` — VirusTotal results  
 - `timeline.md` — Chronological investigation timeline  
 - `report-to-indeed.md` — Abuse report sent to Indeed  
+
+---
+
+If you want, I can help you:
+
+- rewrite the Mongobleed investigation with its own workflow  
+- create a reusable investigation template  
+- refine your folder structure for maximum clarity  
+
+Just tell me where you want to go next.
