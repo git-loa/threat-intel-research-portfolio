@@ -11,7 +11,7 @@ threat-intel-research-portfolio/
 ├── README.md
 │   Portfolio homepage with selected work, methodology, and navigation.
 │
-├── investigations/
+├── case-studies/
 │   Full case studies, each in its own folder.
 │   Includes evidence files, timelines, analysis, and reports.
 │
@@ -38,7 +38,7 @@ threat-intel-research-portfolio/
 
 ## Directory Purpose Summary
 
-### **investigations/**
+### **case-studies/**
 Contains complete, evidence-driven case studies.  
 Each investigation includes:
 - Raw evidence (WHOIS, DNS, URLScan, VirusTotal, logs, etc.)
