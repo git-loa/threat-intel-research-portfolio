@@ -11,11 +11,11 @@ The goal of this portfolio is to demonstrate analytical depth, investigative dis
 ### **interiewca‑icu Phishing Investigation**  
 A QR‑based phishing campaign impersonating a blockchain employer on a job platform.  
 Includes WHOIS, DNS, URLScan, VirusTotal, timeline reconstruction, and MITRE ATT&CK mapping.  
-**Path:** `investigations/interiewca-icu-phishing/`
+**Path:** `case-studies/interiewca-icu-phishing/`
 
 ### **MongoBleed (Coming Soon)**  
 A deep‑dive investigation into exposed MongoDB instances, data leakage, and attacker infrastructure.  
-Will appear under `investigations/` when published.
+Will appear under `case-studies/` when published.
 
 ### **Additional Case Studies (In Progress)**  
 More phishing, scam, and infrastructure investigations are being added iteratively.
