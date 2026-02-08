@@ -13,7 +13,7 @@ A QR‑based phishing campaign impersonating a blockchain employer on a job plat
 Includes WHOIS, DNS, URLScan, VirusTotal, timeline reconstruction, and MITRE ATT&CK mapping.  
 **Path:** `case-studies/interiewca-icu-phishing/`
 
-### **MongoBleed (Coming Soon)**  
+### **MongoBleed**  
 A full lifecycle CTI case study analyzing MongoBleed, a long‑running pattern of opportunistic attacks against publicly exposed MongoDB instances. Includes direction, collection, processing, analysis, and dissemination phases, all based on public OSINT. 
 **Path:** `case-studies/mongoBleed/`
 
