@@ -41,8 +41,8 @@ threat-intel-research-portfolio/
 ### **case-studies/**
 Contains complete, evidence-driven case studies.  
 Each investigation includes:
-- Raw evidence (WHOIS, DNS, URLScan, VirusTotal, logs, etc.)
-- Timeline reconstruction
+- Raw evidence (WHOIS, DNS, URLScan, VirusTotal, logs, etc.) (when applicable)
+- Timeline reconstruction (when applicable)
 - Analysis and findings
 - MITRE ATT&CK mapping (when applicable)
 - Final report or disclosure notes
