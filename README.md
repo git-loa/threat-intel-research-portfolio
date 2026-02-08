@@ -14,8 +14,8 @@ Includes WHOIS, DNS, URLScan, VirusTotal, timeline reconstruction, and MITRE ATT
 **Path:** `case-studies/interiewca-icu-phishing/`
 
 ### **MongoBleed (Coming Soon)**  
-A deep‑dive investigation into exposed MongoDB instances, data leakage, and attacker infrastructure.  
-Will appear under `case-studies/` when published.
+A full lifecycle CTI case study analyzing MongoBleed, a long‑running pattern of opportunistic attacks against publicly exposed MongoDB instances. Includes direction, collection, processing, analysis, and dissemination phases, all based on public OSINT. 
+**Path:** `case-studies/mongoBleed/`
 
 ### **Additional Case Studies (In Progress)**  
 More phishing, scam, and infrastructure investigations are being added iteratively.
