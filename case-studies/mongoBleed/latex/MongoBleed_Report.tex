@@ -1,0 +1,313 @@
+\documentclass[12pt]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[a4paper,margin=0.8in]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{tabularx}      % For flexible-width tables
+\usepackage{newtxtext,newtxmath}   % Professional Times-style font
+
+% ---------------------------------------------------------
+% DOCUMENT SETTINGS
+% ---------------------------------------------------------
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=blue,
+	citecolor=black,
+	pdfauthor={Leonard Okyere Afeke},
+	pdftitle={MongoBleed Cyber Threat Intelligence Report}
+}
+
+\setstretch{1.2}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{MongoBleed CTI Report}
+\lhead{Leonard Okyere Afeke}
+\cfoot{\thepage}
+
+% ---------------------------------------------------------
+% TITLE PAGE
+% ---------------------------------------------------------
+\begin{document}
+	
+	\begin{titlepage}
+		\centering
+		\vspace*{3cm}
+		{\Huge \textbf{MongoBleed}}\par
+		\vspace{0.5cm}
+		{\Large Cyber Threat Intelligence Case Study}\par
+		\vspace{1.5cm}
+		
+		{\large \textbf{Author:} Leonard Okyere Afeke}\par
+		\vspace{0.3cm}
+		{\large \textbf{Date:} \today}\par
+		\vspace{2cm}
+		
+		\vfill
+		{\small This report is based entirely on publicly available information (OSINT). 
+			No scanning, exploitation, or interaction with live systems occurred.}
+	\end{titlepage}
+	
+	% ---------------------------------------------------------
+	% EXECUTIVE SUMMARY
+	% ---------------------------------------------------------
+	\section*{Executive Summary}
+	
+	MongoBleed is a long‑running pattern of opportunistic attacks targeting \textbf{publicly exposed MongoDB instances} left accessible without authentication.  
+	Attackers rapidly scan the internet for open databases, delete stored data, and leave ransom notes claiming the data has been “backed up.” Public reporting consistently shows these claims are false — the attacks result in \textbf{irreversible data loss}.
+	
+	This report synthesizes publicly available information to provide a structured Cyber Threat Intelligence (CTI) assessment of MongoBleed, including attacker behavior, infrastructure patterns, ransom note characteristics, and defensive recommendations.
+	
+	MongoBleed demonstrates the ongoing risks of cloud misconfiguration and highlights the need for continuous exposure monitoring, secure defaults, and strong access controls.
+	
+	% ---------------------------------------------------------
+	% KEY JUDGMENTS
+	% ---------------------------------------------------------
+	\section{Key Judgments}
+	
+	\begin{itemize}
+		\item MongoBleed is \textbf{not a single threat actor}, but a recurring pattern of opportunistic exploitation performed by multiple low‑sophistication groups.
+		\item Attackers rely heavily on \textbf{automated scanning} to identify exposed MongoDB instances within minutes of exposure.
+		\item Infrastructure used in these attacks is typically \textbf{short‑lived VPS servers}, often clustered around specific ASNs.
+		\item Ransom notes follow \textbf{highly consistent templates}, with repeated claims of data backup and Bitcoin payment demands.
+		\item Public reporting shows \textbf{no evidence} that attackers store or back up victim data; restoration is effectively impossible.
+		\item MongoBleed attacks are \textbf{destructive extortion}, not true ransomware.
+		\item The threat persists due to \textbf{misconfigurations}, not software vulnerabilities.
+	\end{itemize}
+	
+	% ---------------------------------------------------------
+	% THREAT OVERVIEW
+	% ---------------------------------------------------------
+	\section{Threat Overview}
+	
+	MongoBleed occurs when MongoDB instances are deployed:
+	
+	\begin{itemize}
+		\item without authentication  
+		\item exposed directly to the internet  
+		\item using legacy or insecure defaults  
+		\item without firewall or security group restrictions  
+	\end{itemize}
+	
+	Attackers exploit these conditions by:
+	
+	\begin{itemize}
+		\item scanning TCP/27017  
+		\item connecting anonymously  
+		\item enumerating databases  
+		\item deleting data  
+		\item inserting ransom notes  
+	\end{itemize}
+	
+	This attack chain is simple, automated, and highly scalable.
+	
+	% ---------------------------------------------------------
+	% OBSERVED ATTACKER BEHAVIOR
+	% ---------------------------------------------------------
+	\section{Observed Attacker Behavior}
+	
+	\subsection*{Discovery}
+	Public reporting (e.g., Rapid7, Shodan) shows attackers use:
+	
+	\begin{itemize}
+		\item automated internet‑wide scanning  
+		\item search engines indexing exposed services  
+		\item scripts that test for unauthenticated access  
+	\end{itemize}
+	
+	\subsection*{Exploitation}
+	Once an exposed instance is found:
+	
+	\begin{itemize}
+		\item attackers connect without credentials  
+		\item enumerate databases  
+		\item delete collections  
+		\item create ransom note collections  
+	\end{itemize}
+	
+	\subsection*{Post‑Exploitation}
+	Attackers typically:
+	
+	\begin{itemize}
+		\item do not maintain persistence  
+		\item do not monitor payments  
+		\item do not store victim data  
+	\end{itemize}
+	
+	MongoBleed campaigns are \textbf{short‑cycle and disposable}.
+	
+	% ---------------------------------------------------------
+	% RANSOM NOTE CHARACTERISTICS
+	% ---------------------------------------------------------
+	\section{Ransom Note Characteristics}
+	
+	Public OSINT sources show that ransom notes follow a consistent structure.
+	
+	\subsection*{Common Phrases (short excerpts)}
+	\begin{quote}
+		“Your database has been backed up…”\\
+		“Send X BTC to the following address…”
+	\end{quote}
+	
+	\subsection*{Paraphrased Summary}
+	Ransom notes typically:
+	
+	\begin{itemize}
+		\item claim the attacker exported the victim’s data  
+		\item demand Bitcoin for restoration  
+		\item provide a wallet and contact method  
+		\item threaten permanent data loss  
+	\end{itemize}
+	
+	\subsection*{Reconstructed Template}
+	
+	\begin{verbatim}
+		READ_ME
+		--------------------
+		Your database has been backed up.
+		To recover your data, send X BTC to [WALLET_ADDRESS].
+		After payment, contact us at [EMAIL/TELEGRAM].
+		If you do not pay, your data will be permanently deleted.
+	\end{verbatim}
+	
+	\subsection*{Key Insight}
+	Public reporting (e.g., BleepingComputer, Rapid7) shows \textbf{no evidence} that attackers store or back up data.  
+	Restoration is impossible.
+	
+	% ---------------------------------------------------------
+	% INFRASTRUCTURE ANALYSIS
+	% ---------------------------------------------------------
+	\section{Infrastructure Analysis}
+	
+	\subsection*{VPS Usage}
+	Attackers frequently use VPS providers such as:
+	
+	\begin{itemize}
+		\item DigitalOcean  
+		\item OVH  
+		\item Hetzner  
+		\item Linode  
+	\end{itemize}
+	
+	These providers enable:
+	
+	\begin{itemize}
+		\item low‑cost automation  
+		\item rapid provisioning  
+		\item disposable infrastructure  
+	\end{itemize}
+	
+	\subsection*{ASN Clustering}
+	Scanning IPs often cluster around specific ASNs, indicating:
+	
+	\begin{itemize}
+		\item repeated use of the same hosting provider  
+		\item automated deployment across multiple IPs  
+	\end{itemize}
+	
+	\subsection*{Geographic Distribution}
+	Infrastructure is globally distributed, reflecting hosting provider availability rather than attacker origin.
+	
+	% ---------------------------------------------------------
+	% MITRE ATT&CK MAPPING
+	% ---------------------------------------------------------
+	\section{MITRE ATT\&CK Mapping}
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabularx}{\textwidth}{|l|l|X|}
+			\hline
+			\textbf{Phase} & \textbf{Technique} & \textbf{Description} \\
+			\hline
+			Reconnaissance & Active Scanning (T1595) & Automated scanning of TCP/27017 \\
+			\hline
+			Resource Development & Acquire Infrastructure (T1583.003) & Use of VPS providers \\
+			\hline
+			Initial Access & Exploit Public‑Facing Application (T1190) & Accessing unauthenticated MongoDB \\
+			\hline
+			Discovery & Query Databases (T1505.003) & Enumerating databases and collections \\
+			\hline
+			Impact & Data Destruction (T1485) & Dropping databases \\
+			\hline
+			Impact & Defacement (T1491) & Creating ransom note collections \\
+			\hline
+		\end{tabularx}
+	\end{table}
+	
+	% ---------------------------------------------------------
+	% DEFENSIVE RECOMMENDATIONS
+	% ---------------------------------------------------------
+	\section{Defensive Recommendations}
+	
+	\subsection*{1. Preventive Controls}
+	\begin{itemize}
+		\item Enable MongoDB authentication  
+		\item Bind MongoDB to localhost or private networks  
+		\item Restrict access using firewalls or cloud security groups  
+		\item Disable legacy configuration defaults  
+		\item Use managed database services with secure defaults  
+	\end{itemize}
+	
+	\subsection*{2. Detection Opportunities}
+	\begin{itemize}
+		\item Anonymous access attempts  
+		\item Unexpected connections to TCP/27017  
+		\item Rapid database deletion events  
+		\item Creation of suspicious collections (e.g., “READ\_ME”)  
+		\item Connections from VPS‑associated ASNs  
+	\end{itemize}
+	
+	\subsection*{3. Hardening Measures}
+	\begin{itemize}
+		\item Enforce role‑based access control  
+		\item Enable auditing and logging  
+		\item Require TLS for all connections  
+		\item Continuously scan cloud assets for misconfigurations  
+	\end{itemize}
+	
+	% ---------------------------------------------------------
+	% CONCLUSION
+	% ---------------------------------------------------------
+	\section{Conclusion}
+	
+	MongoBleed is a persistent, automated threat driven by cloud misconfigurations rather than sophisticated adversaries.  
+	Its impact is severe due to irreversible data loss, rapid exploitation, and widespread exposure of unsecured databases.
+	
+	Organizations can significantly reduce risk by:
+	
+	\begin{itemize}
+		\item enforcing authentication  
+		\item restricting network exposure  
+		\item adopting secure deployment practices  
+		\item monitoring for misconfigurations  
+	\end{itemize}
+	
+	MongoBleed underscores the importance of \textbf{cloud hygiene}, \textbf{secure defaults}, and \textbf{continuous exposure management}.
+	
+	% ---------------------------------------------------------
+	% SOURCES
+	% ---------------------------------------------------------
+	\section*{Sources Consulted (Public OSINT)}
+	
+	\begin{itemize}
+		\item BleepingComputer — reporting on MongoDB ransom attacks  
+		\item Rapid7 — research on exposed databases and opportunistic exploitation  
+		\item Shodan Blog — analysis of exposed services and scanning behavior  
+		\item Censys — internet‑wide exposure insights  
+		\item MongoDB Documentation — security best practices and authentication guidance  
+		\item Public GitHub repositories — examples of MongoDB ransom scripts  
+		\item Comparitech — exposed database research  
+	\end{itemize}
+	
+\end{document}
