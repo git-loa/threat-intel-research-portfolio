@@ -1,3 +1,4 @@
+
 # **MongoBleed — Cyber Threat Intelligence Case Study**  
 ### A structured, lifecycle‑driven CTI analysis based entirely on public OSINT
 
@@ -57,12 +58,8 @@ The case study addresses the following questions:
 ├── 04_analysis.md
 ├── 05_dissemination.md
 │
-├── latex/
-│   ├── report.tex
-│   ├── Makefile
-│   └── (optional) references.bib
-│
-└── README.md
+└── latex/
+    └── report.tex
 ```
 
 ### 01_direction.md  
@@ -81,7 +78,7 @@ Provides a full CTI analysis including attacker behavior, infrastructure pattern
 The final intelligence report — polished, executive‑ready, and suitable for publication.
 
 ### latex/  
-Contains the LaTeX source (`report.tex`) and Makefile for generating a PDF version of the final report.
+Contains the LaTeX source (`report.tex`) for generating a PDF version of the final report.
 
 ---
 
@@ -90,23 +87,10 @@ Contains the LaTeX source (`report.tex`) and Makefile for generating a PDF versi
 If you want to generate a PDF version of the final report:
 
 ### Requirements
-- latexmk  
-- pdflatex (or a full TeX distribution)
+- A LaTeX distribution (e.g., TeX Live, MiKTeX)
 
 ### Build the PDF
-```
-make
-```
-
-### Clean auxiliary files
-```
-make clean
-```
-
-### Remove everything, including the PDF
-```
-make cleanall
-```
+Run `pdflatex` (or your preferred LaTeX engine) on `report.tex`.
 
 ---
 
@@ -150,3 +134,4 @@ It reflects a commitment to clarity, structure, and real‑world intelligence pr
 - Use the structure as a template for your own case studies  
 - Share the final report (`05_dissemination.md`) or the PDF version  
 - Adapt the methodology for other threats or misconfiguration‑based attacks  
+
