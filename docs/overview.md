@@ -40,7 +40,7 @@ timeline, and findings, since different types of CTI investigations follow diffe
 ```
 threat-intel-research-portfolio/
 │
-├── investigations/        # Full case studies with evidence and reports
+├── case-studies/        # Full case studies with evidence and reports
 ├── tools/                 # Bash/Python enrichment and OSINT automation
 ├── cti_learning/          # Notes, diagrams, scenarios, and practice exercises
 ├── docs/                  # Technical documentation (this folder)
