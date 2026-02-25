@@ -71,37 +71,9 @@ A QR‑based phishing campaign impersonating a blockchain employer on a job plat
 Includes WHOIS, DNS, URLScan, VirusTotal, timeline reconstruction, and MITRE ATT&CK mapping.  
 **Path:** `case-studies/interiewca-icu-phishing/`
 
-**Skills Demonstrated:**  
-OSINT collection • DNS analysis • WHOIS/RDAP • URLScan pivoting • Infrastructure analysis • Timeline reconstruction • ATT&CK mapping • Threat communication
-
----
-
-## **Next Case Studies**
-
-To continue developing full-spectrum CTI tradecraft, several new case studies are planned. These investigations combine OSINT, structured analysis, and Elastic Stack telemetry to demonstrate threat hunting, incident reconstruction, and ATT&CK‑aligned behavioral analysis.
-
-### **Upcoming Case Studies**
-- **OpenSSL CMS Buffer Overflow (CVE‑2025‑15467)**  
-  Hybrid OSINT + telemetry case study focusing on exploitation mechanics, certificate parsing behavior, and ATT&CK mapping.
-
-- **Erlang/OTP SSH Protocol Injection (CVE‑2025‑32433)**  
-  Deep dive into protocol-level exploitation, infrastructure analysis, and simulated SSH telemetry.
-
-- **Office OLE Mitigation Bypass (CVE‑2026‑21514)**  
-  Phishing‑focused investigation with user-behavior telemetry, process chains, and timeline reconstruction.
-
-- **Elastic Threat Hunting Pack**  
-  A series of hunts demonstrating hypothesis-driven analysis, detection triage, and internal telemetry correlation.
-
-- **Infrastructure & Scam Campaign Investigations**  
-  Additional OSINT‑driven case studies covering domains, hosting patterns, and attacker infrastructure.
-
----
-
-## **Progress Tracker**
-
-This tracker reflects the current development status of upcoming case studies and CTI projects.  
-Items will be updated as each investigation moves from planning → collection → analysis → publication.
+### **MongoBleed**  
+A full lifecycle CTI case study analyzing MongoBleed, a long‑running pattern of opportunistic attacks against publicly exposed MongoDB instances. Includes direction, collection, processing, analysis, and dissemination phases, all based on public OSINT. 
+**Path:** `case-studies/mongoBleed/`
 
 ### **Case Study Progress**
 - [ ] OpenSSL CMS Buffer Overflow (CVE‑2025‑15467)

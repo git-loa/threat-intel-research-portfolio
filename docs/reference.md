@@ -60,7 +60,7 @@ It does **not** contain workflows, since workflows are documented inside each in
 ## How to Navigate the Portfolio
 
 - Start with the **main README** for a curated overview of selected work.  
-- Explore **investigations/** for full case studies.  
+- Explore **case-studies/** for full case studies.  
 - Review **tools/** if you want to understand or run enrichment scripts.  
 - Browse **cti_learning/** for foundational CTI knowledge and scenario-based learning.  
 - Use **docs/** for structural and contextual reference.

@@ -10,7 +10,7 @@ threat-intel-research-portfolio/
 ├── README.md
 │   Portfolio homepage with selected work, methodology, and navigation.
 │
-├── investigations/
+├── case-studies/
 │   Full case studies, each in its own folder.
 │   Includes evidence files, timelines, analysis, and reports.
 │
@@ -37,15 +37,23 @@ threat-intel-research-portfolio/
 
 ## **Directory Purpose Summary**
 
-### **investigations/**
+### **case-studies/**
 Contains complete, evidence-driven case studies.  
 Each investigation includes:
+<<<<<<< HEAD
 
 - Raw evidence (WHOIS, DNS, URLScan, VirusTotal, logs, etc.)  
 - Timeline reconstruction  
 - Analysis and findings  
 - MITRE ATT&CK mapping (when applicable)  
 - Final report or disclosure notes  
+=======
+- Raw evidence (WHOIS, DNS, URLScan, VirusTotal, logs, etc.) (when applicable)
+- Timeline reconstruction (when applicable)
+- Analysis and findings
+- MITRE ATT&CK mapping (when applicable)
+- Final report or disclosure notes
+>>>>>>> a23c0306c641399aa135c401af534c01780fd298
 
 Each investigation documents its **own workflow**, since different CTI cases require different methodologies.
 
