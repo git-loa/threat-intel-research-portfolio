@@ -1,9 +1,8 @@
 
-# Repository Structure
+# **Repository Structure**
 
 This document provides a clear overview of how the Threat Intelligence Research Portfolio is organized.  
-Each directory has a specific purpose and contributes to a modular, professional layout that separates
-investigations, tooling, learning materials, and documentation.
+Each directory has a specific purpose and contributes to a modular, professional layout that separates investigations, tooling, learning materials, and documentation.
 
 ```
 threat-intel-research-portfolio/
@@ -36,16 +35,17 @@ threat-intel-research-portfolio/
 
 ---
 
-## Directory Purpose Summary
+## **Directory Purpose Summary**
 
 ### **investigations/**
 Contains complete, evidence-driven case studies.  
 Each investigation includes:
-- Raw evidence (WHOIS, DNS, URLScan, VirusTotal, logs, etc.)
-- Timeline reconstruction
-- Analysis and findings
-- MITRE ATT&CK mapping (when applicable)
-- Final report or disclosure notes
+
+- Raw evidence (WHOIS, DNS, URLScan, VirusTotal, logs, etc.)  
+- Timeline reconstruction  
+- Analysis and findings  
+- MITRE ATT&CK mapping (when applicable)  
+- Final report or disclosure notes  
 
 Each investigation documents its **own workflow**, since different CTI cases require different methodologies.
 
@@ -54,6 +54,7 @@ Each investigation documents its **own workflow**, since different CTI cases req
 ### **tools/**
 Holds custom enrichment and OSINT automation scripts.  
 These scripts support:
+
 - WHOIS and DNS enumeration  
 - HTTP header inspection  
 - URLScan submissions  
@@ -66,10 +67,11 @@ A dedicated `tools/README.md` provides usage instructions.
 
 ### **cti_learning/**
 A structured learning library containing:
-- Framework scenarios (ATT&CK, Kill Chain, Diamond Model, NIST CSF)
-- Notes and diagrams
-- Mini investigations and practice exercises
-- Learning logs
+
+- Framework scenarios (ATT&CK, Kill Chain, Diamond Model, NIST CSF)  
+- Notes and diagrams  
+- Mini investigations and practice exercises  
+- Learning logs  
 
 This directory demonstrates foundational CTI knowledge and continuous skill development.
 
@@ -78,6 +80,7 @@ This directory demonstrates foundational CTI knowledge and continuous skill deve
 ### **docs/**
 Contains technical documentation that supports the portfolio but does not belong on the homepage.  
 Includes:
+
 - Overview of the portfolio  
 - Repository structure (this file)  
 - Additional reference material  
@@ -92,3 +95,4 @@ Provides shortcuts for running enrichment workflows consistently and efficiently
 ---
 
 This structure keeps the portfolio clean, modular, and easy to navigate for both recruiters and technical reviewers.
+
