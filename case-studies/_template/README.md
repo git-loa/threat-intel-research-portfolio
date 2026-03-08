@@ -1,5 +1,4 @@
 
-
 # Investigation Template
 
 This template provides a standardized structure for documenting threat intelligence investigations.  

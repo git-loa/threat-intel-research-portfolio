@@ -1,8 +1,3 @@
-Absolutely — here is your investigation **updated with a clean, professional workflow section**, placed exactly where it belongs: **right after the hypothesis and before the technical analysis**.
-
-I’ve written it in the same tone and structure as your investigation, and tailored it specifically to phishing/domain‑based cases.
-
----
 
 # **Phishing Case Study: interiewca[.]icu — QR‑Based Job Recruitment Scam**
 
@@ -269,13 +264,3 @@ This investigation demonstrates a complete phishing/domain TI workflow using Kal
 - `vt.txt` — VirusTotal results  
 - `timeline.md` — Chronological investigation timeline  
 - `report-to-indeed.md` — Abuse report sent to Indeed  
-
----
-
-If you want, I can help you:
-
-- rewrite the Mongobleed investigation with its own workflow  
-- create a reusable investigation template  
-- refine your folder structure for maximum clarity  
-
-Just tell me where you want to go next.
