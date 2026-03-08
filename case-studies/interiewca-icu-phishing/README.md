@@ -1,8 +1,7 @@
 
 # **Phishing Case Study: interiewca[.]icu — QR‑Based Job Recruitment Scam**
 
-**Analyst:** Leonard Okyere Afeke  
-**Platform:** Kali Linux  
+**Analyst:** Leonard Okyere Afeke    
 **Date:** December 2025  
 **Category:** Threat Intelligence / Phishing Infrastructure Analysis  
 
@@ -25,11 +24,11 @@ The domain is newly registered, anonymous, unbranded, and redirects to an unrela
 - **Source:** Indeed job posting  
 - **Employer name:** “Northgate Digital Asset Management Inc.”  
 - **Message:** Invitation to complete a 10‑minute online interview  
-- **Link:** `interiewca.icu`
+- **Link:** `interiewca[.]icu`
 
 ### **Red Flags**
 - Misspelled domain (“interiew” vs “interview”)  
-- `.icu` TLD (high‑abuse domain)  
+- `[.]icu` TLD (high‑abuse domain)  
 - No corporate website  
 - No LinkedIn presence  
 - No regulatory registration  
