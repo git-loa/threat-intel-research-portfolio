@@ -50,16 +50,20 @@ The case study addresses the following questions:
 ## Repository Structure
 
 ```
-/mongoBleed-case-study
+mongoBleed/
 │
 ├── 01_direction.md
 ├── 02_collection.md
 ├── 03_processing.md
 ├── 04_analysis.md
 ├── 05_dissemination.md
+├── README.md
 │
-└── latex/
-    └── report.tex
+└── reporting/
+    ├── report.md
+    └── pdf_report/
+        MongoBleed_Report.pdf
+
 ```
 
 ### 01_direction.md  
