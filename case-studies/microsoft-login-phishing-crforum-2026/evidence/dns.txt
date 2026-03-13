@@ -1,0 +1,17 @@
+[*] DNS A Records
+Non-authoritative answer:
+13.107.213.35
+
+[*] DNS NS Records
+Non-authoritative answer:
+login.ai.crforum.co.uk  canonical name = orionfrontdoor-cwe6h9fbdtgyfffw.z02.azurefd.net
+orionfrontdoor-cwe6h9fbdtgyfffw.z02.azurefd.net canonical name = mr-z02.tm-azurefd.net
+mr-z02.tm-azurefd.net   canonical name = shed.dual-low.part-0007.t-0009.t-msedge.net
+shed.dual-low.part-0007.t-0009.t-msedge.net     canonical name = part-0007.t-0009.t-msedge.net
+
+[*] DNS MX Records
+Non-authoritative answer:
+login.ai.crforum.co.uk  canonical name = orionfrontdoor-cwe6h9fbdtgyfffw.z02.azurefd.net
+orionfrontdoor-cwe6h9fbdtgyfffw.z02.azurefd.net canonical name = mr-z02.tm-azurefd.net
+mr-z02.tm-azurefd.net   canonical name = shed.dual-low.part-0007.t-0009.t-msedge.net
+shed.dual-low.part-0007.t-0009.t-msedge.net     canonical name = part-0007.t-0009.t-msedge.net

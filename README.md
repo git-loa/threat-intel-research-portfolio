@@ -55,48 +55,36 @@ This structure mirrors real-world CTI workflows and makes it easy to navigate in
 ---
 
 ## **Selected Work**
+### **microsoft-login-phishing-crforum-2026 (Completed)**
+### **OpenSSL CMS Buffer Overflow (Completed)**
+An investigation into **CVE‑2025‑15467**, a stack buffer overflow in OpenSSL’s CMS `AuthEnvelopedData` AEAD parsing routine.  
+**Path:** `case-studies/openssl-cms-buffer-overflow-CVE-2025-15467/`
 
 ### **MongoBleed (Completed)**  
 A deep‑dive investigation into exposed MongoDB instances, data leakage, and attacker infrastructure.  
 Includes full CTI lifecycle documentation and a LaTeX‑generated intelligence report.  
 **Path:** `case-studies/mongoBleed/`
-
-**Skills Demonstrated:**  
-Intelligence cycle • Vulnerability analysis • Data exposure assessment • Infrastructure pivoting • Structured analytic techniques • ATT&CK mapping • Report writing (technical + executive)
-
----
-
 ### **interiewca‑icu Phishing Investigation (Completed)**  
 A QR‑based phishing campaign impersonating a blockchain employer on a job platform.  
 Includes WHOIS, DNS, URLScan, VirusTotal, timeline reconstruction, and MITRE ATT&CK mapping.  
 **Path:** `case-studies/interiewca-icu-phishing/`
 
-### **MongoBleed**  
-A full lifecycle CTI case study analyzing MongoBleed, a long‑running pattern of opportunistic attacks against publicly exposed MongoDB instances. Includes direction, collection, processing, analysis, and dissemination phases, all based on public OSINT. 
-**Path:** `case-studies/mongoBleed/`
-
 ### **Case Study Progress**
-- [ ] OpenSSL CMS Buffer Overflow (CVE‑2025‑15467)
-- [ ] Erlang/OTP SSH Protocol Injection (CVE‑2025‑32433)
-- [ ] Office OLE Mitigation Bypass (CVE‑2026‑21514)
-- [ ] Elastic Threat Hunting Pack
-- [ ] Infrastructure & Scam Campaign Investigations
+- [✅] OpenSSL CMS Buffer Overflow (CVE‑2025‑15467)
+- [✅] mongoBleed/
+- [✅] microsoft-login-phishing-crforum-2026
 
-### **Supporting CTI Outputs**
-- [ ] Hunt Reports (Elastic Stack)
-- [ ] Flash Briefs
-- [ ] RFI Responses
-- [ ] Intelligence Estimates
-- [ ] APT Profile (OSINT‑Only)
-- [ ] CTI Program Documents (PIRs, Metrics, Stakeholder Alignment)
+
 
 ---
 
 ## **Portfolio Index**
 
 ### **Case Studies**
+- `microsoft-login-phishing-crforum-2026`
+- `openssl-cms-buffer-overflow-CVE-2025-15467/`
+- `mongoBleed/` 
 - `interiewca-icu-phishing/`  
-- `mongoBleed/`  
 - `_template/` (OSINT-only case study structure)  
 - `<future-case-study>/`  
 
