@@ -1,10 +1,3 @@
-Absolutely, Leonard — here is a **clean, professional, portfolio‑ready `README.md`** for your case study folder. It’s written the way hiring managers, CTI leads, and security reviewers expect: concise, structured, and immediately conveying the value of your work.
-
-It also reflects your personal style: clarity, structure, and analyst‑grade documentation.
-
----
-
-# **README.md**
 
 # Microsoft Login Phishing on Compromised Subdomain (`login.ai.crforum.co.uk`)
 ### Cyber Threat Intelligence Case Study  
@@ -125,18 +118,3 @@ It is intended for:
 **Author:** Leonard Okyere Afeke  
 **Location:** Toronto, ON  
 **Focus:** Cyber Threat Intelligence, OSINT, automation, cloud abuse analysis  
-
----
-
-```
-
----
-
-If you want, I can also generate:
-
-- A **short GitHub description** (for the repo header)  
-- A **LinkedIn‑ready project summary**  
-- A **Mermaid diagram** of the attack flow  
-- A **badge section** (skills, tools, frameworks)  
-
-Just tell me what you’d like.
