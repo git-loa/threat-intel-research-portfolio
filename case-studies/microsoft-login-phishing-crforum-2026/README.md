@@ -6,7 +6,6 @@ It also reflects your personal style: clarity, structure, and analyst‑grade do
 
 # **README.md**
 
-```markdown
 # Microsoft Login Phishing on Compromised Subdomain (`login.ai.crforum.co.uk`)
 ### Cyber Threat Intelligence Case Study  
 ### Author: Leonard Okyere Afeke  
