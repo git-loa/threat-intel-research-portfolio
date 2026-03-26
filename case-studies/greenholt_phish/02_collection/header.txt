@@ -1,0 +1,83 @@
+X-Atlas-Received: from 10.201.192.162 by atlas125.free.mail.bf1.yahoo.com with http; Wed, 10 Jun 2020 05:58:55 +0000
+Return-Path: <info@mutawamarine.com>
+Received: from x.x.x.x (EHLO sub.redacted.com)
+ by atlas125.free.mail.bf1.yahoo.com with SMTPs; Wed, 10 Jun 2020 05:58:55 +0000
+X-Originating-Ip: [x.x.x.x]
+Received-SPF: fail (domain of mutawamarine.com does not designate x.x.x.x as permitted sender)
+Authentication-Results: atlas125.free.mail.bf1.yahoo.com;
+ spf=fail smtp.mailfrom=mutawamarine.com;
+ dmarc=unknown
+X-Apparently-To: redacted@yahoo.com; Wed, 10 Jun 2020 05:58:55 +0000
+X-YMailISG: CA2XOWoWLDuMav_xVT1F_okXM35Y6SWpmP6zsE6LeQRxoxw4
+ YjzuEZUWxEEJzHhUGbKbpzCq7GFztoIFDbqKMkWunxnYA6aofbh6xusqm_FJ
+ x591PPWDY5NhvW7H.Pwb9o9VmzNhbgKs3KzMN9IO7Uh5jf5y6rUw.dSshjuv
+ j1RgxZYshquA.RCedSbTlM1pyxBT4LoSfMkWr0E4FgJSW3l9zg8wK35sizWP
+ GqFHAyID0v.GOU7dBURvMp8asqQiPa4kYC7v0oQTvmUEDtENPAjmCnfcajpo
+ gei5zs471gDrr3JWxiUMUTyChHRw9nCczLepgGA2Jt_MdbCZ7qgFqWMvvo1I
+ nIXkl35mwKec90ZCIPJc6tCHAQyFkE.030_.0VmK_brmLt5oqQiGBYmyCV2i
+ CwhdwdTwYkUIdgler50ESBs5mHXSqnNvtmpQoRjMPdqSXiB7yvSIFaiF5rQ8
+ OTEw0w1CkWz4gxhNU4FH4Iub03b9TLvUoX9KLEFx3Del5yPTF8xXY7NY_kzA
+ aCwKTjp4FaeT2Mk1Pq5P48DF.dB6hdMTmCoowuSwouW2M9Yp4euqKNzGrlcf
+ 2KcRMROfFVcKDwXSaHw4tMhKvXSH0KiWMVFpXPaMmt2c0cklVpwZMyql8w8W
+ PlponB1e66yiIqNuYV.vt64i52HFh0jNwcuuohMo7MA7DmMP.OtkdwLlUqLS
+ 68AfikwfW3Sppf_pTqtP6NPf2wuAsJIaT7_QQ.4x3khgYrC4jTmXjVBWDVRV
+ wT0AdlQ716U8TVp.0AKvevKfMzfZoTOTsGLuQU.w8uZhv_6mwKB4sW7Pbhbr
+ B1RJadC0va2CJiCbAC1Qnapm5egSIExqkhboy8iOUfzOqkD1a1_tn5nv1IxD
+ bCqerO7cnAjpN1amfUvC8gjD345qb6k9l7h7a8TFsv_67Nkrok_.M4_MRZcf
+ .iuxPcffE2r1ocaSfWQg6yof0WQta51sbWQidg7B_4XR2_6cbg8Ui39t2v2Y
+ bgWISohtB1urfpr.b1SANr7fvE2Zzvzjz4_4PbBtBDevFUB7Pjq0GiAe_Nx_
+ YpW8pLoFasyi1k4T9f5e5ryqAu.HToIegVimVa4xwuzjbNvaE7Tsm4m3vepb
+ zGZI1BWuDLQ-
+X-Originating-IP: [x.x.x.x]
+Received: from 10.197.41.148  (EHLO sub.redacted.com) (x.x.x.x)
+  by mta4212.mail.bf1.yahoo.com with SMTP; Wed, 10 Jun 2020 05:58:54 +0000
+Received: from hwsrv-737338.hostwindsdns.com ([192.119.71.157]:51810 helo=mutawamarine.com)
+	by sub.redacted.com with esmtp (Exim 4.80)
+	(envelope-from <info@mutawamarine.com>)
+	id 1jissD-0004g5-Ts
+	for webmaster@redacted.org; Wed, 10 Jun 2020 01:02:04 -0400
+Reply-To: "Mr. James Jackson" <info.mutawamarine@mail.com>
+From: "Mr. James Jackson" <info@mutawamarine.com>
+To: webmaster@redacted.org
+Subject: webmaster@redacted.org your: Transfer Reference Number:(09674321)
+Date: 09 Jun 2020 22:58:27 -0700
+Message-ID: <20200609225823.DFAEAAF31A6B7414@mutawamarine.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_0012_BDB07B06.81B59493"
+X-Spam-Status: No, score=-0.5
+X-Spam-Score: -4
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "sub.redacted.com", has
+ identified this incoming email as possible spam.  The original message
+ has been attached to this so you can view it (if it isn't spam) or label
+ similar future email.  If you have any questions, see
+ the administrator of that system for details.
+ 
+ Content preview:  Good day webmaster@redacted.org , As instructed,
+    funds has been transferred to your account this morning via SWIFT. Details
+    are as below and a receipt of payment is attached. [...] 
+ 
+ Content analysis details:   (-0.5 points, 5.0 required)
+ 
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/, no
+                             trust
+                             [192.119.71.157 listed in list.dnswl.org]
+ -0.0 BAYES_40               BODY: Bayes spam probability is 20 to 40%
+                             [score: 0.3644]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.4 HTML_MIME_NO_HTML_TAG  HTML-only message, but there is no HTML tag
+ -0.9 AWL                    AWL: Adjusted score from AWL reputation of From: address
+X-Spam-Flag: NO
+X-AntiAbuse: This header was added to track abuse, please include it with any abuse report
+X-AntiAbuse: Primary Hostname - sub.redacted.com
+X-AntiAbuse: Original Domain - redacted.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - mutawamarine.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+Content-Length: 557512

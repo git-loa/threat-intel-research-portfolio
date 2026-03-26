@@ -1,0 +1,11 @@
+Type,Value,Source,Notes
+Email Address,info@mutawamarine.com,Header,Claimed sender
+Email Address,info.mutawamarine@mail.com,Header,Reply-To mismatch
+Email Address,webmaster@redacted.org,Header,Recipient
+IP Address,192.119.71.157,Header,Originating IP (Hostwinds VPS)
+Domain,mutawamarine.com,Header,Spoofed sender domain
+Domain,mail.com,Header,Reply-To domain
+File Name,SWT_#09674321____PDF__.CAB,Attachment,Disguised as PDF
+SHA256,2e91c533615a9bb8929ac4bb76707b2444597ce063d84a4b33525e25074fff3f,Attachment,Primary malware hash
+SHA1,5a2bb8188377c15c036843b4a6ab9b0c0f2c1607,Attachment,Secondary hash
+MD5,f4dd3456cdb1976a145c1179a4d461ec,Attachment,Secondary hash

@@ -1,0 +1,203 @@
+\documentclass[12pt]{article}
+
+% ---------------------------------------------------------
+% PACKAGES
+% ---------------------------------------------------------
+\usepackage[a4paper,margin=0.8in,headheight=14.49998pt]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\usepackage{seqsplit} % For wrapping long hashes
+\usepackage{newtxtext,newtxmath}
+
+% ---------------------------------------------------------
+% DOCUMENT SETTINGS
+% ---------------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black,
+    pdfauthor={Leonard Okyere Afeke},
+    pdftitle={Phishing Incident Report – Mutawa Marine Services Impersonation}
+}
+
+\setstretch{1.2}
+\sloppy
+\setlength{\emergencystretch}{3em}
+
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Phishing CTI Report}
+\lhead{Leonard Okyere Afeke}
+\cfoot{\thepage}
+
+% ---------------------------------------------------------
+% TITLE PAGE
+% ---------------------------------------------------------
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{3cm}
+    {\Huge \textbf{Phishing Incident Report}}\par
+    \vspace{0.5cm}
+    {\Large Mutawa Marine Services Impersonation}\par
+    \vspace{1.5cm}
+    
+    {\large \textbf{Author:} Leonard Okyere Afeke}\par
+    \vspace{0.3cm}
+    {\large \textbf{Date:} \today}\par
+    \vspace{2cm}
+    
+    \vfill
+    {\small This report is based entirely on publicly available information (OSINT). 
+    No scanning, exploitation, or interaction with live systems occurred.}
+\end{titlepage}
+
+% ---------------------------------------------------------
+% EXECUTIVE SUMMARY
+% ---------------------------------------------------------
+\section*{Executive Summary}
+
+A phishing email impersonating Mutawa Marine Services was delivered to the recipient with a malicious RAR archive disguised as a PDF receipt. The attachment contained a Trojan Downloader, confirmed by VirusTotal (46/63 detections) and Hybrid Analysis (Threat Score 100/100). The email did not originate from the legitimate organization and instead came from a Hostwinds VPS, indicating clear domain spoofing.
+
+The malware exhibited outbound encrypted communication (SSL/TLS) and TOR-related behavior, consistent with downloader malware attempting to contact remote infrastructure for follow-on payload delivery. VirusTotal’s Relations graph linked the payload to multiple phishing emails and ZIP archives across 2025, suggesting the sample is part of a broader commodity malware distribution campaign rather than a targeted attack.
+
+No evidence indicates that the threat actor had specific interest in the recipient. The infrastructure, malware type, and delivery method all align with low-sophistication cybercrime activity aimed at establishing initial access for secondary payload deployment such as credential stealers, RATs, or ransomware.
+
+% ---------------------------------------------------------
+% INCIDENT NARRATIVE
+% ---------------------------------------------------------
+\section{Incident Narrative}
+
+\subsection{Initial Delivery}
+The phishing email impersonated Mutawa Marine Services and claimed to provide a shipping receipt. The attachment, named to resemble a PDF, was actually a RAR archive containing a disguised executable. This social engineering approach is consistent with commodity phishing campaigns that rely on user interaction to initiate malware execution.
+
+\subsection{Email Infrastructure Analysis}
+Header analysis revealed that the email did not originate from the legitimate mutawamarine.com domain. Instead, it was sent from a Hostwinds VPS (192.119.71.157), a low-cost hosting provider frequently used for disposable phishing infrastructure.
+
+Authentication checks showed:
+\begin{itemize}[noitemsep]
+    \item SPF: Fail
+    \item DKIM: None
+    \item DMARC: Fail
+\end{itemize}
+
+The Reply-To address pointed to a mail.com account, a tactic commonly used to redirect victim responses away from the impersonated organization.
+
+\subsection{Malware Analysis}
+The attached archive (\texttt{SWT\_ \#09674321\_\_\_\_PDF\_\_.CAB}) contained a .NET executable (\texttt{SWT\_ \#09674321\_\_PDF.com}) masquerading as a PDF file. VirusTotal identified the payload as malicious, with 46/63 vendors flagging the archive and 60/72 flagging the extracted executable.
+
+VirusTotal Relations linked the sample to multiple phishing emails and ZIP archives submitted throughout 2025, indicating a broad, ongoing distribution campaign.
+
+Hybrid Analysis classified the payload as a Trojan Downloader (Threat Score 100/100). Behavioral observations included:
+\begin{itemize}[noitemsep]
+    \item Outbound SSL/TLS traffic
+    \item TOR-related communication patterns
+    \item Multi-process execution
+\end{itemize}
+
+No persistence, privilege escalation, or lateral movement behaviors were observed.
+
+\subsection{Assessment}
+The phishing email and associated malware reflect low-sophistication cybercrime activity aimed at establishing a foothold on the victim’s system. The combination of spoofed sender identity, public email reply-to address, VPS-based sending infrastructure, and commodity downloader malware aligns with financially motivated threat actors distributing malware at scale.
+
+% ---------------------------------------------------------
+% IOC TABLE
+% ---------------------------------------------------------
+\section{Indicators of Compromise (IOCs)}
+
+\begin{tabularx}{\textwidth}{|l|X|X|}
+\hline
+\textbf{Category} & \textbf{Indicator} & \textbf{Description} \\
+\hline
+Sender IP & 192.119.71.157 & Hostwinds VPS; origin of spoofed phishing email \\
+\hline
+Spoofed Domain & mutawamarine.com & Legitimate business domain impersonated \\
+\hline
+Reply-To Domain & mail.com & Public email provider used for redirection \\
+\hline
+Attachment Name & SWT\_ \#09674321\_\_\_\_PDF\_\_.CAB & Malicious RAR/CAB archive disguised as PDF \\
+\hline
+Extracted Payload & SWT\_ \#09674321\_\_PDF.com & Malicious .NET executable \\
+\hline
+SHA-256 (Archive) & \seqsplit{2e91c533615a9bb8929ac4bb76707b2444597ce063d84a4b33525e25074fff3f} & Hash of malicious archive \\
+\hline
+SHA-256 (Payload) & \seqsplit{05261f5a64f81a34fdde66cc82b573773e5dfa3bb5c3ccbfe2d0eef0e9d7b6c9} & Hash of Trojan Downloader \\
+\hline
+Email Authentication & SPF: Fail; DKIM: None; DMARC: Fail & Confirms spoofing \\
+\hline
+MX Record & mutawamarine-com.mail.protection.outlook.com & Legitimate Microsoft 365 mail host \\
+\hline
+Nameservers & DNS1.STABLETRANSIT.COM / DNS2.STABLETRANSIT.COM & Rackspace \\
+\hline
+Behavioral Indicators & SSL/TLS traffic; TOR activity; Multi-process execution & Downloader behavior \\
+\hline
+\end{tabularx}
+
+% ---------------------------------------------------------
+% RECOMMENDATIONS
+% ---------------------------------------------------------
+\section{Recommendations}
+
+\subsection{Email Security Controls}
+\begin{itemize}
+    \item Enforce SPF, DKIM, and DMARC validation.
+    \item Quarantine or reject messages failing DMARC alignment.
+    \item Block executable content inside compressed archives.
+    \item Enable attachment sandboxing.
+\end{itemize}
+
+\subsection{User Awareness and Training}
+\begin{itemize}
+    \item Reinforce phishing awareness around unexpected receipts.
+    \item Encourage reporting of suspicious emails.
+\end{itemize}
+
+\subsection{Endpoint Protection}
+\begin{itemize}
+    \item Block unknown or unsigned executables.
+    \item Detect downloader behavior and multi-process spawning.
+    \item Alert on suspicious outbound encrypted traffic.
+\end{itemize}
+
+\subsection{Network Security}
+\begin{itemize}
+    \item Block TOR exit nodes and known malicious IPs.
+    \item Restrict traffic to unused VPS providers.
+    \item Enable SSL/TLS inspection where appropriate.
+\end{itemize}
+
+\subsection{Incident Response Readiness}
+\begin{itemize}
+    \item Maintain phishing and malware containment playbooks.
+    \item Retain logs for at least 90 days.
+\end{itemize}
+
+\subsection{IOC Deployment}
+\begin{itemize}
+    \item Push IOCs to SIEM, EDR, firewall, and email gateway.
+    \item Conduct threat hunting for related activity.
+\end{itemize}
+
+% ---------------------------------------------------------
+% APPENDIX — METHODOLOGY AND SOURCE
+% ---------------------------------------------------------
+\section*{Appendix A — Methodology and Source}
+
+This report is based entirely on publicly available information (OSINT).  
+No scanning, exploitation, or interaction with live systems occurred.
+
+The phishing email sample (\texttt{challenge.eml}) was obtained from the 
+TryHackMe training environment \textit{“The Greenholt Phish”}.  
+All analysis was performed on a controlled, sandboxed copy of the file.
+
+\end{document}

@@ -1,0 +1,11 @@
+# Incident Narrative
+
+The recipient received an email impersonating Mutawa Marine Services, claiming to provide a shipping receipt and urging the user to review an attached document. The attachment, named to resemble a PDF, was actually a RAR archive containing a disguised executable. This social engineering approach is consistent with commodity phishing campaigns that rely on user interaction to initiate malware execution.
+
+Header analysis revealed that the email did not originate from the legitimate mutawamarine.com domain. Instead, it was sent from a Hostwinds VPS (192.119.71.157), a low‑cost hosting provider frequently used for disposable phishing infrastructure. The message failed SPF, DKIM, and DMARC alignment, confirming that the sender identity was spoofed. Additionally, the Reply‑To address pointed to a mail.com account, a tactic commonly used to redirect victim responses away from the impersonated organization.
+
+The attached archive (`SWT_#09674321____PDF__.CAB`) contained a .NET executable (`SWT_#09674321__PDF.com`) masquerading as a PDF file. VirusTotal identified the payload as malicious, with 46/63 vendors flagging the archive and 60/72 flagging the extracted executable. The Relations tab linked the sample to multiple phishing emails and ZIP archives submitted throughout 2025, indicating that the malware is part of a broader, ongoing distribution campaign rather than a targeted intrusion.
+
+Hybrid Analysis further classified the payload as a Trojan Downloader, assigning it a Threat Score of 100/100. Behavioral analysis showed outbound SSL/TLS traffic, TOR‑related communication patterns, and multi‑process execution—behaviors consistent with downloader malware attempting to contact remote infrastructure to retrieve additional payloads. No persistence, privilege escalation, or lateral movement behaviors were observed, supporting the assessment that this sample represents an initial access stage.
+
+Overall, the phishing email and associated malware reflect low‑sophistication cybercrime activity aimed at establishing a foothold on the victim’s system. The combination of spoofed sender identity, public email reply‑to address, VPS‑based sending infrastructure, and commodity downloader malware aligns with financially motivated threat actors distributing malware at scale.
