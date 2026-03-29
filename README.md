@@ -2,14 +2,14 @@
 # **Threat Intelligence Research Portfolio**
 
 ## Skills and Tooling
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Elastic Stack](https://img.shields.io/badge/Elastic%20Stack-005571?style=for-the-badge&logo=elastic&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-EE0000?style=for-the-badge&logo=mitre&logoColor=white)
+![OSINT](https://img.shields.io/badge/OSINT-1E90FF?style=for-the-badge&logo=internet-explorer&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white)
 
-`https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white`  
-`https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white`  
-`https://img.shields.io/badge/Elastic%20Stack-005571?style=for-the-badge&logo=elastic&logoColor=white`  
-`https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black`  
-`https://img.shields.io/badge/MITRE%20ATT%26CK-EE0000?style=for-the-badge&logo=mitre&logoColor=white`  
-`https://img.shields.io/badge/OSINT-1E90FF?style=for-the-badge&logo=internet-explorer&logoColor=white`  
-`https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white`
 
 This portfolio highlights structured cyber threat intelligence investigations, vulnerability research, enrichment tooling, and scenario‑based learning. Each project applies CTI tradecraft across the intelligence cycle—direction, collection, processing, analysis, and reporting—supported by OSINT workflows, Elastic Stack telemetry, and clear, concise documentation.
 
