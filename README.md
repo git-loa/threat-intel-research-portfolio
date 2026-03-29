@@ -1,192 +1,131 @@
 
 # **Threat Intelligence Research Portfolio**
 
-## Badges
+## Skills and Tooling
 
-<!-- Languages -->
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
-![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+`https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white`  
+`https://img.shields.io/badge/Bash-121011?style=for-the-badge&logo=gnu-bash&logoColor=white`  
+`https://img.shields.io/badge/Elastic%20Stack-005571?style=for-the-badge&logo=elastic&logoColor=white`  
+`https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black`  
+`https://img.shields.io/badge/MITRE%20ATT%26CK-EE0000?style=for-the-badge&logo=mitre&logoColor=white`  
+`https://img.shields.io/badge/OSINT-1E90FF?style=for-the-badge&logo=internet-explorer&logoColor=white`  
+`https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white`
 
-<!-- Tools & Platforms -->
-![Elastic Stack](https://img.shields.io/badge/Elastic%20Stack-005571?style=for-the-badge&logo=elastic&logoColor=white)
-![Kibana](https://img.shields.io/badge/Kibana-005571?style=for-the-badge&logo=kibana&logoColor=white)
-![Elasticsearch](https://img.shields.io/badge/Elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+This portfolio highlights structured cyber threat intelligence investigations, vulnerability research, enrichment tooling, and scenario‑based learning. Each project applies CTI tradecraft across the intelligence cycle—direction, collection, processing, analysis, and reporting—supported by OSINT workflows, Elastic Stack telemetry, and clear, concise documentation.
 
-<!-- CTI & Security -->
-![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-EE0000?style=for-the-badge&logo=mitre&logoColor=white)
-![STIX/TAXII](https://img.shields.io/badge/STIX%2FTAXII-0A0A0A?style=for-the-badge&logo=oasis&logoColor=white)
-![OSINT](https://img.shields.io/badge/OSINT-1E90FF?style=for-the-badge&logo=internet-explorer&logoColor=white)
+### Investigation Tooling
 
-<!-- Development & Documentation -->
-![Makefile](https://img.shields.io/badge/Makefile-000000?style=for-the-badge&logo=gnu&logoColor=white)
-![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white)
+A consistent set of OSINT and malware‑analysis tools supports each case study:
 
+- **VirusTotal** for static malware triage, relations, and infrastructure pivoting  
+- **URLScan** for behavioral analysis, redirects, and indicator extraction  
+- **PhishTool** for email header parsing and phishing workflow support  
+- **Hybrid Analysis** for dynamic malware behavior  
+- **MXToolbox** for DNS, MX, and SMTP diagnostics  
+- **WHOIS/RDAP** for domain ownership and registration timelines  
+- **curl, dig, nslookup, openssl** for protocol‑level inspection  
 
-This repository showcases my work in cyber threat intelligence through structured investigations, vulnerability case studies, enrichment tooling, and scenario‑based learning notes. The portfolio reflects a practical, evidence‑driven approach to analyzing phishing campaigns, exposed services, suspicious domains, and attacker infrastructure — supported by Bash/Python automation, Elastic Stack telemetry, and clear, concise reporting.
-
-The goal of this portfolio is to demonstrate analytical depth, investigative discipline, and the ability to communicate complex findings in a structured and accessible way. Each investigation applies core CTI tradecraft, including the intelligence cycle, OSINT‑based collection, hypothesis‑driven analysis, ATT&CK mapping, structured analytic techniques, and hybrid OSINT + internal telemetry workflows.
+These tools enable repeatable, evidence‑driven CTI workflows across phishing, malware, and infrastructure investigations.
 
 ---
 
-## **Start Here**
+## Start Here
 
-If you're new to this repository, here’s the best way to explore it:
+A clear path through the portfolio:
 
-1. **Begin with the completed case studies**  
-   These showcase full CTI investigations with clear structure, OSINT collection, analysis, and reporting.
-
-2. **Review the CTI Learning section**  
-   Scenario-based notes that explain core concepts like ATT&CK, the Kill Chain, and the Diamond Model.
-
-3. **Explore the CTI Lab documentation**  
-   The `docs/cti_lab/` folder outlines how I use Elastic Stack telemetry to support threat hunting and hybrid investigations.
-
-4. **Check the Next Case Studies + Progress Tracker**  
-   This shows what I’m actively building and how the portfolio is evolving.
-
-5. **Browse the Tools folder**  
-   Contains Bash/Python scripts for enrichment, automation, and OSINT workflows.
-
-This structure mirrors real-world CTI workflows and makes it easy to navigate investigations, learning materials, and supporting tools.
+1. **Case Studies** — Full investigations following a repeatable CTI workflow.  
+2. **CTI Learning** — Scenario‑based notes on ATT&CK, the Kill Chain, and the Diamond Model.  
+3. **CTI Lab** — Elastic Stack environment used for telemetry‑supported investigations.  
+4. **Tools** — Bash/Python utilities for enrichment and automation.
 
 ---
 
-## **Selected Work**
-### **microsoft-login-phishing-crforum-2026 (Completed)**
-### **OpenSSL CMS Buffer Overflow (Completed)**
-An investigation into **CVE‑2025‑15467**, a stack buffer overflow in OpenSSL’s CMS `AuthEnvelopedData` AEAD parsing routine.  
+## Selected Work
+### **Mutawa Marine Services Phishing Analysis**  
+Full CTI investigation into a phishing email impersonating Mutawa Marine Services, including infrastructure analysis, malware triage, IOC extraction, ATT&CK mapping, and a full LaTeX‑based intelligence report.  
+**Path:** `case-studies/greenholt_phish/`
+
+### **Microsoft Login Phishing**  
+Credential‑harvesting campaign hosted on a compromised .co.uk subdomain and delivered via Azure Front Door.  
+**Path:** `case-studies/microsoft-login-phishing-crforum-2026/`
+
+### **OpenSSL CMS Buffer Overflow — CVE‑2025‑15467**  
+Deep‑dive analysis of a stack buffer overflow in OpenSSL’s CMS `AuthEnvelopedData` AEAD parsing routine.  
 **Path:** `case-studies/openssl-cms-buffer-overflow-CVE-2025-15467/`
 
-### **MongoBleed (Completed)**  
-A deep‑dive investigation into exposed MongoDB instances, data leakage, and attacker infrastructure.  
-Includes full CTI lifecycle documentation and a LaTeX‑generated intelligence report.  
+### **MongoBleed**  
+Investigation into exposed MongoDB instances, data leakage patterns, and attacker scanning infrastructure.  
 **Path:** `case-studies/mongoBleed/`
-### **interiewca‑icu Phishing Investigation (Completed)**  
-A QR‑based phishing campaign impersonating a blockchain employer on a job platform.  
-Includes WHOIS, DNS, URLScan, VirusTotal, timeline reconstruction, and MITRE ATT&CK mapping.  
+
+### **interiewca‑icu QR‑Based Phishing**  
+Analysis of a QR‑based phishing campaign impersonating a blockchain employer.  
 **Path:** `case-studies/interiewca-icu-phishing/`
-
-### **Case Study Progress**
-- [✅] OpenSSL CMS Buffer Overflow (CVE‑2025‑15467)
-- [✅] mongoBleed/
-- [✅] microsoft-login-phishing-crforum-2026
-
-
 
 ---
 
-## **Portfolio Index**
+## Portfolio Index
 
-### **Case Studies**
-- `microsoft-login-phishing-crforum-2026`
-- `openssl-cms-buffer-overflow-CVE-2025-15467/`
-- `mongoBleed/` 
+### Case Studies  
+- `microsoft-login-phishing-crforum-2026/`  
+- `openssl-cms-buffer-overflow-CVE-2025-15467/`  
+- `mongoBleed/`  
 - `interiewca-icu-phishing/`  
-- `_template/` (OSINT-only case study structure)  
-- `<future-case-study>/`  
+- `greenholt_phish/`  
+- `_template/` (OSINT‑only case study structure)
 
-### **CTI Learning**
-Scenario‑based notes and diagrams covering:
-- MITRE ATT&CK  
-- Kill Chain  
-- Diamond Model  
-- NIST CSF / 800‑61  
-- STIX/TAXII  
-- Threat Intelligence Tools  
-- Standards vs Frameworks  
-- Foundations of Threat Intelligence  
+### CTI Learning  
+Scenario‑based notes covering MITRE ATT&CK, the Kill Chain, the Diamond Model, STIX/TAXII, threat‑intel tooling, and foundational CTI concepts.  
+Located in `cti_learning/`.
 
-Full content available in `cti_learning/`.
-
-### **Tools**
-Custom enrichment and OSINT automation scripts:
+### Tools  
+Automation and enrichment scripts for OSINT workflows:  
 - `domain_enrich.sh`  
 - `vt_lookup.sh`  
 - `urlscan_submit.sh`  
 - `domain_enrich.py`  
 
-Usage instructions are available in `tools/README.md`.
+Documentation in `tools/README.md`.
 
 ---
 
-## **Repository Structure**
-
-This repository is organized to reflect professional CTI workflows, including case studies, learning materials, tooling, and lab documentation.
+## Repository Structure
 
 ```
-.
-├── case-studies/               # Full CTI investigations and reports
-│   ├── interiewca-icu-phishing/
-│   ├── mongoBleed/
-│   └── _template/              # OSINT-only case study template
-│
-├── cti_learning/               # Scenario-based CTI learning notes
-│   ├── diagrams/
-│   ├── learning_log/
-│   ├── mini_investigations/
-│   └── notes/
-│
-├── docs/                       # Meta-documentation and CTI lab materials
-│   ├── overview.md
-│   ├── reference.md
-│   ├── repository_structure.md
-│   └── cti_lab/
-│       ├── roadmap.md
-│       ├── simulations.md
-│       ├── lab_capabilities.md
-│       └── project_plan.md
-│
-├── tools/                      # OSINT enrichment and automation scripts
-│   ├── domain_enrich.py
-│   ├── domain_enrich.sh
-│   ├── urlscan_submit.sh
-│   ├── vt_lookup.sh
-│   └── README.md
-│
-├── LICENSE
-├── Makefile
-└── README.md
+case-studies/       # Full CTI investigations
+cti_learning/       # Scenario-based learning notes
+docs/               # CTI lab documentation and meta-guides
+tools/              # OSINT enrichment and automation scripts
+LICENSE
+Makefile
+README.md
 ```
 
-Each directory is intentionally structured to support repeatable CTI workflows, clear documentation, and portfolio-ready investigations.
+This structure mirrors professional CTI workflows and keeps investigations, learning, and tooling clearly separated.
 
 ---
 
-## **CTI Lab Environment**
+## CTI Lab Environment
 
-This portfolio is supported by a self‑hosted Elastic Stack lab designed to simulate real-world CTI workflows. The environment includes:
+A self‑hosted Elastic Stack lab supports hybrid OSINT + telemetry investigations. The environment includes Elasticsearch, Kibana, Fleet Manager, and Elastic Agent, enabling:
 
-- **Elasticsearch** for log storage  
-- **Kibana** for analysis, hunting, and visualization  
-- **Fleet Manager** for endpoint management  
-- **Elastic Agent** deployed on Ubuntu endpoints  
+- process, network, DNS, and file event analysis  
+- threat hunting and hypothesis‑driven investigations  
+- detection rule testing  
+- timeline reconstruction  
 
-The lab enables:
-
-- Internal telemetry analysis (process, network, DNS, file events)  
-- Threat hunting and hypothesis-driven investigations  
-- Detection rule testing and alert triage  
-- Timeline reconstruction for simulated incidents  
-- Hybrid OSINT + telemetry case studies  
-- Structured analytic techniques applied to real data  
-
-This environment allows me to practice professional CTI workflows safely, ethically, and at production quality.
+This lab provides the internal visibility needed to complement OSINT‑based investigations with real telemetry.
 
 ---
 
-## **How I Work**
+## How I Work
 
 My investigative approach emphasizes:
-- Structured triage and hypothesis‑driven analysis  
-- OSINT‑based enumeration (WHOIS, DNS, RDAP, HTTP)  
-- Evidence collection and timeline reconstruction  
-- Infrastructure pivoting across domains, IPs, and ASNs  
-- Behavioral mapping using MITRE ATT&CK  
-- Internal telemetry analysis using Elastic Stack  
-- Clear, beginner‑friendly documentation  
 
-I aim to balance analytical rigor with accessible communication, ensuring that each investigation is both technically sound and easy to understand. This portfolio reflects ongoing development across CTI tradecraft, including structured analysis, reporting, threat hunting, and program‑level intelligence practices.
+- hypothesis‑driven analysis  
+- OSINT‑based infrastructure enumeration  
+- evidence collection and timeline reconstruction  
+- ATT&CK‑aligned behavioral mapping  
+- Elastic Stack telemetry for internal visibility  
+- clear, structured reporting  
 
+This portfolio reflects ongoing development across CTI tradecraft, threat hunting, and intelligence program practices.
