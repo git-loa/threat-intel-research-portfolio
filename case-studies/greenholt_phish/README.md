@@ -2,7 +2,7 @@
 # Mutawa Marine Services Phishing Analysis  
 ### Cyber Threat Intelligence Case Study  
 **Author:** Leonard Okyere Afeke  
-**Date:** 2025  
+**Date:** 2026  
 
 ---
 
